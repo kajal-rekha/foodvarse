@@ -13,12 +13,12 @@ const Recipe = ({ recipe }) => {
         <span className=" publisher text-xs uppercase text-sky-400 font-semibold tracking-widest">
           {recipe.publisher}
         </span>
-        <h2 className="title text-2xl capitalize truncate font-semibold">
+        <h2 className="title text-xl capitalize truncate font-semibold">
           {recipe.title}
         </h2>
         <Link
           to={`recipe-item/${recipe.id}`}
-          className="bg-gradient-to-br from-rose-400 to-rose-600 self-start text-rose-50 text-sm uppercase font-medium tracking-wider p-3 px-8 rounded-lg mt-2 shadow-md shadow-rose-200 hover:shadow-lg hover:shadow-rose-300 duration-300"
+          className="bg-gradient-to-br from-rose-400 to-rose-600 self-start text-rose-50 text-sm uppercase font-medium tracking-wider p-3 px-8 rounded-lg mt-3 shadow-md shadow-rose-200 hover:shadow-lg hover:shadow-rose-300 duration-300"
         >
           view recipe
         </Link>
