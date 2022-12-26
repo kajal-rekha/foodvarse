@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FryingPan from "./FryingPan";
 
 const NotFound = () => {
   return (
@@ -12,6 +13,7 @@ const NotFound = () => {
       >
         Go home
       </Link>
+      <FryingPan />
     </div>
   );
 };

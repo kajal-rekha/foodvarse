@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -5,7 +6,6 @@ import Footer from "./components/Footer";
 import Favourites from "./components/Favourites";
 import RecipeItem from "./components/RecipeItem";
 import NotFound from "./components/NotFound";
-import { useEffect, useRef, useState } from "react";
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
