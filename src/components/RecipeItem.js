@@ -32,13 +32,13 @@ const RecipeItem = ({ favouriteHandler, savedItems }) => {
   }, [recipe]);
 
   return (
-    <div className="recipe-item-section container mx-auto py-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className="recipe-item-section container mx-auto px-5 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:px-0">
       <div className="left row-start-2 lg:row-start-auto">
-        <div className="img overflow-hidden rounded-xl border shadow-md group">
+        <div className="img overflow-hidden rounded-xl border shadow-md lg:h-96 group">
           <img
             src={recipe?.image_url}
             alt={recipe?.title}
-            className="h-full w-full object-cover group-hover:scale-105 duration-300"
+            className="w-full h-full object-cover group-hover:scale-105 duration-300"
           />
         </div>
         <div className="ings mt-10">
@@ -56,11 +56,13 @@ const RecipeItem = ({ favouriteHandler, savedItems }) => {
         </div>
       </div>
       <div className="right flex flex-col gap-5">
-        <span className="publisher uppercase tracking-widest font-semibold text-sky-400">
+        <span className="publisher text-sky-400 font-semibold uppercase tracking-widest">
           {recipe?.publisher}
         </span>
-        <h2 className="title text-5xl">{recipe?.title}</h2>
-        <div className="servings-cooking-time flex gap-5 uppercase tracking-widest font-semibold text-rose-500">
+        <h2 className="title capitalize text-4xl lg:text-6xl">
+          {recipe?.title}
+        </h2>
+        <div className="servings-cooking-time flex flex-col justify-between gap-5 lg:flex-row font-semibold tracking-widest text-rose-500 uppercase">
           <div className="servings">Servings: {recipe?.servings} people</div>
           <div className="cooking-time">
             Cooking time:{" "}
@@ -69,7 +71,7 @@ const RecipeItem = ({ favouriteHandler, savedItems }) => {
               : durationCalc(recipe?.cooking_time / 60)}
           </div>
         </div>
-        <div className="btns flex gap-5">
+        <div className="btns flex flex-col gap-5 items-start lg:flex-row lg:justify-center">
           <button
             onClick={() => favouriteHandler(recipe?.id)}
             className={`bg-gradient-to-br p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-2 inline-block shadow-md hover:shadow-lg  duration-300 ${
@@ -86,13 +88,13 @@ const RecipeItem = ({ favouriteHandler, savedItems }) => {
             href={recipe?.source_url}
             target="_blank"
             rel="noreferrer"
-            className="bg-gradient-to-br from-purple-400 to-purple-600 text-purple-50 p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-2 inline-block shadow-md shadow-purple-200 hover:shadow-lg hover:shadow-purple-300 duration-300"
+            className="bg-gradient-to-br from-sky-400 to-sky-600 text-sky-50 p-3 px-8 rounded-lg text-sm uppercase font-bold tracking-wider mt-2 inline-block shadow-md shadow-sky-200 hover:shadow-lg hover:shadow-sky-300 duration-300 outline-none text-center"
           >
             Get directions
           </a>
           <Link
             to="/"
-            className="bg-gradient-to-br from-rose-400 to-rose-600 text-rose-50 p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-2 inline-block shadow-md shadow-rose-200 hover:shadow-lg hover:shadow-rose-300 duration-300"
+            className="bg-gradient-to-br from-rose-400 to-rose-600 text-rose-50 p-3 px-8 rounded-lg text-sm uppercase font-bold tracking-wider mt-2 inline-block shadow-md shadow-rose-200 hover:shadow-lg hover:shadow-rose-300 duration-300 outline-none text-center"
           >
             Back to home
           </Link>
