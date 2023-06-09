@@ -8,8 +8,6 @@ Foodvarse is an online store that offers a variety of food items for purchase. W
 
 ## Project Features
 
-## Features
-
 - **Recipe Search and Ingredient Retrieval**: Users can search different kinds of recipes.Get the ingredients for the searched recipes.
 
 - **Save Recipes as Favorites**: Users can save specific recipes as favorites.Convenient way to keep track of preferred recipes.
