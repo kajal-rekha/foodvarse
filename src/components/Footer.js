@@ -4,7 +4,9 @@ const Footer = () => {
       <h2 className="text-2xl font-bold lowercase italic">
         food<span className="text-rose-500">verse</span>
       </h2>
-      <p>&copy; {new Date().getFullYear()} Foodvarse.All rights reserved</p>
+      <p className="text-lg">
+        &copy; {new Date().getFullYear()} Foodvarse .All rights reserved
+      </p>
     </footer>
   );
 };
